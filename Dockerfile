@@ -3,14 +3,14 @@ FROM node:14.18.1
 
 #### Create WORK Directory
 WORKDIR /code
-#### Config Port
-ENV PORT 8080
+
 #### Copy Dependencies
 COPY package.json /code/package.json
 #### Install Dependencies
 RUN npm install
 #### copy to code
 COPY . /code
+EXPOSE 3000
 #### Execute command
-CMD [ "node","src/app.js" ]
+CMD [ "npm","start" ]
 
