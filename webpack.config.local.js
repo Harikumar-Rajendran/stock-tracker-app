@@ -10,7 +10,7 @@ module.exports = (options) => {
     path: path.join(__dirname, options.env),
   }).parsed;
 
-  const PORT = 3002;
+  const PORT = 3000;
   return ({
     mode: "development",
     entry: ["@babel/polyfill", "./src/"],
